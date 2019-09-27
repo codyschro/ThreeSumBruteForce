@@ -84,13 +84,16 @@ public class ThreeSumBruteForce {
 
     public static int threeSum(long[] list){
 
+        //define variables
         int N = list.length;
         int count = 0;
 
+        //check each combination of 3 numbers without repeats of same trio
         for (int i = 0; i < N; i++){
             for(int j = i + 1; j < N; j++){
                 for(int k = j + 1; k < N; k++){
                     if(list[i] + list[j] + list[k] == 0) {
+                        //if sums to 0, increase count of triplets
                         count++;
                     }
                 }
@@ -99,6 +102,7 @@ public class ThreeSumBruteForce {
         return count;
     }
 
+    //create random integer list containing negative and positive numbers
     public static long[] createRandomListOfIntegers(int size){
         long[] newList = new long[size];
         for(int j = 0; j < size; j++) {
